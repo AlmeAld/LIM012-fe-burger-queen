@@ -1,0 +1,21 @@
+$textColorBtn : white;
+$borderRadiusBtn: 8px;
+
+button{
+  background-color: #FF6745;
+  border: none;
+  display: block;
+  width: 16rem;
+  height: 3.5rem;
+  margin: 2.5rem auto;
+  border-radius: $borderRadiusBtn;
+  outline: none;
+  cursor: pointer;
+  .text-btn{
+    color: $textColorBtn;
+    display: inline;
+    margin-left: 2.5rem;
+    font-size: 24px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,22 @@
+
+@media (min-width: 768px) and (max-width: 1024px){
+
+.container-home{
+  background: linear-gradient(to right, #FFA751, #FFE259);
+  display: grid;
+  grid-template-columns: 407px 1fr;
+  align-content: center;
+  height: 100vh;
+  .logo{
+    margin: 0px;
+    img{
+    vertical-align: top;
+    width: 61rem;
+    }
+  }
+  
+}
+
+
+
+}
