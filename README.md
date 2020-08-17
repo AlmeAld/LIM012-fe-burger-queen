@@ -80,7 +80,8 @@ con todos sus _productos_. El usuario debe poder ir eligiendo qué _productos_
 agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
-![](./src/images/Home.png)
+![vista Home](./src/images/Home.png)
+<img src="./src/images/Home.png" alt=""/>
 
 ## Objetivos de aprendizaje
 
