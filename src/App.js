@@ -1,18 +1,20 @@
 import './global.scss'
 import React from 'react';
-import {BrowserRouter as Router, Route,Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import HomeContainer from './containers/HomeContainer'
-import Carta from '../src/components/Carta'
-import Cocina from '../src/components/Cocina'
+import CocinaContainer from '../src/containers/CocinaContainer'
+import CartaContainer from './containers/CartaContainer';
 
 //manejar rutas layout, container
 
 function App() {
   return (
     <Router>
-      <Route path='/' exact component={HomeContainer}></Route>
-      <Route path='/carta' component={Carta}></Route>
-      <Route path='/cocina' component={Cocina}></Route>
+      <Switch>
+        <Route path='/' exact component={HomeContainer}></Route>
+        <Route path='/carta' component={CartaContainer}></Route>
+        <Route path='/cocina' component={CocinaContainer}></Route>
+      </Switch>
     </Router>
   );
 }
