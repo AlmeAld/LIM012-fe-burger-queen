@@ -6,20 +6,24 @@ import buergerHome from '../images/Burger-home.png';
 import iconWaiter from '../images/waiter.svg'
 import chef from '../images/chef.svg'
 
-function Home (){
-  return(
+function Home() {
+  return (
     <div className='container-home'>
       <figure className='logo'>
-        <img src={buergerHome} alt="logo burger"/>
+        <img src={buergerHome} alt="logo-burger" />
       </figure>
-      <div className= 'welcome-app'>
+      <div className='welcome-app'>
         <h1 className='title'>Burger Queen</h1>
         <h2 className='subtitle'>La vida sabe mejor con extra <span>Queso!</span></h2>
-        <Link to= '/carta'>
-        <Button icon={iconWaiter} text='Meserx' classname='btn-waiter' />
+        <Link to='/carta'>
+          <Button icon={iconWaiter} classname='btn-waiter'>
+            Meserx
+        </Button>
         </Link>
         <Link to='/cocina'>
-        <Button icon={chef} text='Cocina' classname='btn-chef' />
+          <Button icon={chef} classname='btn-chef'>
+            Cocina
+        </Button>
         </Link>
       </div>
     </div>

@@ -1,21 +1,43 @@
-$textColorBtn : white;
+$textColorBtn : #fff;
 $borderRadiusBtn: 8px;
 
 button{
   background-color: #FF6745;
   border: none;
-  display: block;
   width: 16rem;
   height: 3.5rem;
-  margin: 2.5rem auto;
+  margin: 2.5rem 1rem;
   border-radius: $borderRadiusBtn;
   outline: none;
   cursor: pointer;
-  .text-btn{
-    color: $textColorBtn;
-    display: inline;
-    margin-left: 2.5rem;
-    font-size: 24px;
-    font-weight: bold;
-  }
+  color: $textColorBtn;
+  font-size: 24px;
+  font-weight: bold;
+}
+.icon-button{
+  margin-right: 1.5rem;
+}
+
+.add{
+  background-color: #FF6745;
+  margin: 0;
+  width: 72px;
+  height: 25px;
+  font-size: 14px;
+  margin-left: 0;
+  font-weight: lighter;
+}
+
+.sendOrder{
+  width: 11rem;
+  font-size: 20px;
+}
+
+.less-button, .more-button{
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 1px;
 }

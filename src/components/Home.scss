@@ -14,7 +14,29 @@
     width: 61rem;
     }
   }
-  
+  .welcome-app{
+    margin: 0 auto;
+    .title{
+      color: #fff;
+      font-family:'Lily Script One', cursive;
+      font-size: 5.5rem;
+      letter-spacing: 2pt;
+      margin: 0px;
+      text-align: center;
+    }
+    .subtitle{
+      color: #61251B;
+      font-family: 'Sail', cursive;
+      letter-spacing: 1pt;
+      font-size: 29px;
+      margin: 3rem 0;
+      text-align: center;
+      span{
+        font-family: 'Rock Salt', cursive;
+        margin: 0 9px;
+      }
+    }
+  }
 }
 
 
