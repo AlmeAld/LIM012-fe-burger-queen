@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Button from './Button';
+import './CardProduct.scss';
 import lessIcon from '../images/less-icon.svg'
 import plusIcon from '../images/plus-icon.svg'
-import './CardProduct.scss';
 
-function CardProduct({ id, name, count, image, addItemToCart, addCount, decrementCount }) {
-  function remove() {
-    console.log('remover')
+function CardProduct({ id, name, count, image, addItemToCart, addCount, decrementCount, removeCount }) {
+  function remove(id) {
+    removeCount(id)
   }
 
   function decrement(id) {
@@ -14,7 +14,6 @@ function CardProduct({ id, name, count, image, addItemToCart, addCount, decremen
   }
 
   function increment(id) {
-    // console.log('incrementar', id)
     addItemToCart(id)
   }
 
@@ -26,20 +25,20 @@ function CardProduct({ id, name, count, image, addItemToCart, addCount, decremen
       {
         count ?
           <>
-            <Button noIcon className='add' onClick={remove}>
+            <Button noIcon className='add' onClick={() => remove(id)}>
               Remover
               </Button>
             <div className='card-count'>
               <Button className='less-button' noIcon onClick={() => decrement(id)}>
-                <span className='card-count-less-icon'>
-                  <img src={lessIcon} alt="" />
-                </span>
+                {/* <span className='card-count-less-icon'> */}
+                <img src={lessIcon} alt="" className='card-count-less-icon' />
+                {/* </span> */}
               </Button>
               <p className='card-count-value' >{count}</p>
               <Button className='more-button' noIcon onClick={() => addCount(id)}>
-                <span className='card-count-more-icon'>
-                  <img src={plusIcon} alt="" />
-                </span>
+                {/* <span className='card-count-more-icon'> */}
+                <img src={plusIcon} alt="" className='card-count-more-icon' />
+                {/* </span> */}
               </Button>
             </div>
           </>
