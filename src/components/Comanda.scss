@@ -49,6 +49,20 @@
   &-content-pedido{
     height: 33rem;
     overflow-y: scroll;
+    &-detalle{
+      height: 33rem;
+      margin: 0 21px;
+    }
+  }
+  &-total{
+    border-top: 3px solid #282424;
+    display: flex;
+    justify-content: space-around;
+    &-text, &-count{
+      font-size: 20px;
+      font-weight: bold;
+      margin: 8px 0px
+    }
   }
   &-button{
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
