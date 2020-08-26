@@ -3,7 +3,7 @@ import products from '../db.js'
 import './CardWrapper.scss'
 import CardProduct from './CardProduct'
 
-function CardWrapper({ title, data, addItemToCart, addCount, decrementCount }) {
+function CardWrapper({ title, data, addItemToCart, addCount, decrementCount, removeCount }) {
 
 
   return (
@@ -12,7 +12,7 @@ function CardWrapper({ title, data, addItemToCart, addCount, decrementCount }) {
       <ul className="menu-card-list">
         {
           data.map(id =>
-            <CardProduct addItemToCart={addItemToCart} addCount={addCount} decrementCount={decrementCount} key={id} {...products.food[id]} />
+            <CardProduct addItemToCart={addItemToCart} addCount={addCount} decrementCount={decrementCount} removeCount={removeCount} key={id} {...products.food[id]} />
           )
         }
       </ul>
