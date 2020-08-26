@@ -28,18 +28,21 @@ function Comanda({ data }) {
         <p className=' comanda-subtitle-precio'>Precio</p>
       </div>
       <div className='comanda-content-pedido'>
-        {data ? data.map(({ count, name, precio }) =>
-          <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
+        <div className='comanda-content-pedido-detalle'>
+          {data ? data.map(({ count, name, precio, id }) =>
+            <div key={id} style={{ display: 'flex', justifyContent: 'space-between' }}>
 
-            {count ? <p>{count}</p> : null}
-            <p>{name}</p>
-            <p>S/. {precio}</p>
-          </div>) :
-          <span>No existe</span>
-        }
+              {count ? <p>{count}</p> : null}
+              <p>{name}</p>
+              <p>S/. {precio}.00</p>
+            </div>) :
+            <span>No existe</span>
+          }
+        </div>
       </div>
-      <div>
-        <p>total <span>S/. </span> </p>
+      <div className='comanda-total'>
+        <p className='comanda-total-text'>total</p>
+        <span className='comanda-total-count'>S/. </span>
       </div>
       <div className='comanda-button'>
         <Button noIcon className='sendOrder'>Cancelar</Button>
