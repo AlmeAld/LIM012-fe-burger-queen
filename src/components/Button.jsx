@@ -1,11 +1,11 @@
 import React from 'react'
 import './Button.scss'
 
-function Button({ icon, className, noIcon, onclick, children }) {
+function Button({ icon, noIcon, children, ...rest }) {
 
 
   return (
-    <button className={className} onClick={onclick} >
+    <button {...rest} >
       {
         noIcon
           ? null
