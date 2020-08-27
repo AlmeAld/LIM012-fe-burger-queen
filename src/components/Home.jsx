@@ -16,12 +16,12 @@ function Home() {
         <h1 className='title'>Burger Queen</h1>
         <h2 className='subtitle'>La vida sabe mejor con extra <span>Queso!</span></h2>
         <Link to='/carta'>
-          <Button icon={iconWaiter} classname='btn-waiter'>
+          <Button icon={iconWaiter} className='btn-waiter'>
             Meserx
         </Button>
         </Link>
         <Link to='/cocina'>
-          <Button icon={chef} classname='btn-chef'>
+          <Button icon={chef} className='btn-chef'>
             Cocina
         </Button>
         </Link>
