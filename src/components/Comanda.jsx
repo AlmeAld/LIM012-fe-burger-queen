@@ -34,7 +34,7 @@ function Comanda({ data }) {
 
               {count ? <p>{count}</p> : null}
               <p>{name}</p>
-              <p>S/. {precio}.00</p>
+              <p>S/. {precio * count}.00</p>
             </div>) :
             <span>No existe</span>
           }
