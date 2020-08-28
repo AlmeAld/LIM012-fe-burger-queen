@@ -17,7 +17,7 @@ function CartaContainer() {
   })
 
 
-    function addItemToCart(idItem) {
+  function addItemToCart(idItem) {
     //1) convertir el objeto'categories' en array(object.entries)
     //2)tengo 4 arrays con key:{value} iterando devuelve 4 arrays list
     //3)unir los 4 arrays en uno solo (flatMap)
@@ -33,9 +33,10 @@ function CartaContainer() {
       // si no existe => agregar el  item a selectedFoods(actualizar estado)
       setState({ ...state, categories: { ...state.categories } })
     } else {
-      // si existe => igular el count del item a 1. actuaizar el estado de selectedFoods con el estado anterior ma selecteditem
+      // si existe => igular el count del item a 1. actuaizar el estado de selectedFoods con el estado anterior mas selecteditem
       selectedItem.count = 1
       setState({ ...state, selectedFoods: [...state.selectedFoods, selectedItem] })
+
     }
   }
 
@@ -51,7 +52,11 @@ function CartaContainer() {
     let selectedItem = arrFoods.find((item) => item.id === idItem);
     //increntar en count + 1 del objeto que me devuelva selectedItem y actualizar el estado
     selectedItem.count += 1;
+    // selectedItem.precio = selectedItem.count * selectedItem.precio
     setState({ ...state, categories: { ...state.categories } })
+
+    // selectedItem.precio = selectedItem.count
+    // setState({ ...state, categories: { ...state.categories } })
 
   }
 
@@ -70,6 +75,7 @@ function CartaContainer() {
     } else {
       selectedItem.count -= 1;
       setState({ ...state, categories: { ...state.categories } })
+      // setState({ ...state, categories: { ...state.categories } })
     }
   }
 
