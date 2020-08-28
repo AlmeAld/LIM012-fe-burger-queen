@@ -1,5 +1,5 @@
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (max-width: 1024px){
 
 .container-home{
   background: linear-gradient(to right, #FFA751, #FFE259);
@@ -11,11 +11,11 @@
     margin: 0px;
     img{
     vertical-align: top;
-    width: 61rem;
+    width: 27rem;
     }
   }
   .welcome-app{
-    margin: 0 auto;
+    margin: 72px auto 0;
     .title{
       color: #fff;
       font-family:'Lily Script One', cursive;
@@ -39,6 +39,53 @@
   }
 }
 
+
+
+}
+
+
+@media (min-width: 1025px) and (max-width: 1920px) {
+
+  .container-home{
+    width: 70%;
+    height: 100vh;
+    margin: auto;
+    background: linear-gradient(to right, #FFA751, #FFE259);
+    display: flex;
+    align-items: center;
+    .logo{
+    margin: 0px;
+    img{
+    vertical-align: top;
+    width: 33rem;
+    }
+  }
+  .welcome-app{
+    margin: 72px auto 0;
+    .title{
+      color: #fff;
+      font-family:'Lily Script One', cursive;
+      font-size: 5.5rem;
+      letter-spacing: 2pt;
+      margin: 0px;
+      text-align: center;
+    }
+    .subtitle{
+      color: #61251B;
+      font-family: 'Sail', cursive;
+      letter-spacing: 1pt;
+      font-size: 29px;
+      margin: 3rem 0;
+      text-align: center;
+      span{
+        font-family: 'Rock Salt', cursive;
+        margin: 0 9px;
+      }
+    }
+  }
+}
+
+  
 
 
 }
