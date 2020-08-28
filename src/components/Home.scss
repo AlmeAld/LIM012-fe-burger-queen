@@ -1,11 +1,11 @@
 
-@media (max-width: 1024px){
+@media (min-width: 769px) and (max-width: 1024px){
 
 .container-home{
   background: linear-gradient(to right, #FFA751, #FFE259);
   display: grid;
   grid-template-columns: 407px 1fr;
-  align-content: center;
+  align-items: center;
   height: 100vh;
   .logo{
     margin: 0px;
@@ -44,7 +44,7 @@
 }
 
 
-@media (min-width: 1025px) and (max-width: 1920px) {
+@media (min-width: 1025px) and  (max-width: 1920px) {
 
   .container-home{
     width: 70%;
@@ -86,6 +86,45 @@
 }
 
   
+
+
+}
+
+@media (max-width: 1023px){
+  .container-home{
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(to right, #FFA751, #FFE259);
+  .logo{
+    margin: 0px;
+    img{
+    vertical-align: top;
+    width: 22rem;
+    margin-top: 1.5rem;
+    }
+  }
+  .welcome-app{
+    .title{
+      color: #fff;
+      font-family:'Lily Script One', cursive;
+      font-size: 4rem;
+      letter-spacing: 2pt;
+      margin: 0px;
+      text-align: center;
+    }
+    .subtitle{
+      color: #61251B;
+      font-family: 'Sail', cursive;
+      letter-spacing: 1pt;
+      margin: 2rem 0;
+      text-align: center;
+      span{
+        font-family: 'Rock Salt', cursive;
+        margin: 0 9px;
+      }
+    }
+  }
+}
 
 
 }
