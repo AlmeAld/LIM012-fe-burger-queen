@@ -18,12 +18,12 @@ function Home() {
         <Link to='/carta'>
           <Button icon={iconWaiter} className='btn-waiter'>
             Meserx
-        </Button>
+          </Button>
         </Link>
         <Link to='/cocina'>
           <Button icon={chef} className='btn-chef'>
             Cocina
-        </Button>
+          </Button>
         </Link>
       </div>
     </div>
