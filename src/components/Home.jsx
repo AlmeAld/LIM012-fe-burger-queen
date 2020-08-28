@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Button from './Button'
 import './Home.scss'
-import buergerHome from '../images/Burger-home.png';
+import buergerHome from '../images/burgerHome.png';
 import iconWaiter from '../images/waiter.svg'
 import chef from '../images/chef.svg'
 
