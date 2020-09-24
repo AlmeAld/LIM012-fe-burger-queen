@@ -1,16 +1,14 @@
-import React from 'react'
-import Nav from '../Nav'
-import './Layout.scss'
+import React from "react";
+import Nav from "../Nav";
+import "./Layout.scss";
 
-function Layout({ children, title }) {
+function Layout({ children, title, className }) {
   return (
-    <div className='layout'>
+    <div className="layout">
       <Nav title={title} />
-      <div className='content'>
-        {children}
-      </div>
+      <div className={className}>{children}</div>
     </div>
-  )
+  );
 }
 
-export default Layout
+export default Layout;
