@@ -19,19 +19,6 @@ function OrdersServed() {
       });
   }, []);
 
-  function time(fecha) {
-    if (!fecha) return;
-    const date = fecha.toDate();
-    return `${date.getHours()}:${date.getMinutes()}`;
-    // console.log(
-    //   date.toLocaleTimeString("es-ES", {
-    //     hour12: false,
-    //     hour: "numeric",
-    //     minute: "numeric",
-    //   })
-    // );
-  }
-
   function pendingTime(initDate, endDate) {
     const initHour = initDate.toDate();
     const endHour = endDate.toDate();
