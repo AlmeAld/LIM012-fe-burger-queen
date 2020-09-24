@@ -1,1 +1,14 @@
-
+.content-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &-title {
+    font-family: Sail;
+    font-size: 38px;
+    line-height: 70px;
+  }
+}
+.content-orders {
+  display: flex;
+  justify-content: center;
+}
