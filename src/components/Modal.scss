@@ -1,0 +1,15 @@
+.modal-content {
+  background-color: rgba(51, 41, 39, 0.31);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  .modal-content {
+    background-color: #fafaf8;
+    width: 50%;
+    &-header {
+      display: flex;
+    }
+  }
+}
