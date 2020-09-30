@@ -27,9 +27,14 @@
     margin-top: 2rem;
   }
   .card-main {
-    // display: flex;
-    &-lis {
-      padding: 7px 1rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    &-container {
+      width: 30.25rem;
+      &-list {
+        margin-bottom: 0.5rem;
+      }
     }
   }
 }
