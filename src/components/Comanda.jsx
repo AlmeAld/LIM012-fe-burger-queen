@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./Comanda.scss";
-import Button from "./Button";
-import { firebase } from "../../src/configFirebase";
+import { PrimaryButtonOrder } from "./Button";
+// import { firebase } from "../../src/configFirebase";
+import { createCollection } from "../API/firestore";
 
-function Comanda({ data }) {
+function Comanda({ data, resetOrders }) {
   // console.log(data);
   // data.forEach(ele=>console.log(ele.name) )
   const [name, setName] = useState("");
@@ -27,21 +28,13 @@ function Comanda({ data }) {
   //funcion con firebase para enviar los datos capturados
   function sendOrder(e) {
     e.preventDefault();
-
     const order = data.map((ele) => ({
       id: ele.id,
       nameProduct: ele.name,
       quantity: ele.count,
     }));
 
-    firebase.firestore().collection("orders").add({
-      order,
-      username: name,
-      usermesa: mesa,
-      initDate: time,
-      endDate: "",
-      status: "pending",
-    });
+    createCollection(order, name, mesa, time, resetOrders);
   }
 
   return (
@@ -88,12 +81,10 @@ function Comanda({ data }) {
         <span className="comanda-total-count">S/. {sumaTotal()} </span>
       </div>
       <div className="comanda-button">
-        <Button noIcon className="sendOrder">
-          Cancelar
-        </Button>
-        <Button noIcon className="sendOrder" onClick={sendOrder}>
+        <PrimaryButtonOrder>Cancelar</PrimaryButtonOrder>
+        <PrimaryButtonOrder onClick={sendOrder}>
           Enviar Pedido
-        </Button>
+        </PrimaryButtonOrder>
       </div>
     </div>
   );
