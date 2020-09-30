@@ -1,9 +1,9 @@
 import React from "react";
 import "./cardReadyToServe.scss";
+import PropTypes from "prop-types";
 
 function CardReadyToServe({ name, mesa, order, endDate }) {
   const time = new Date();
-
   function pendingTime(endDate, date) {
     const currentTime = date.getTime();
     const endHour = endDate.toDate().getTime();
@@ -38,5 +38,12 @@ function CardReadyToServe({ name, mesa, order, endDate }) {
     </div>
   );
 }
+
+CardReadyToServe.propTypes = {
+  name: PropTypes.string.isRequired,
+  mesa: PropTypes.string.isRequired,
+  order: PropTypes.array.isRequired,
+  endDate: PropTypes.object,
+};
 
 export default CardReadyToServe;

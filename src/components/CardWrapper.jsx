@@ -2,6 +2,7 @@ import React from "react";
 import products from "../db.js";
 import "./CardWrapper.scss";
 import CardProduct from "./CardProduct";
+import PropTypes from "prop-types";
 
 function CardWrapper({
   title,
@@ -29,6 +30,14 @@ function CardWrapper({
     </div>
   );
 }
+
+CardWrapper.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.array,
+  addItemToCart: PropTypes.func,
+  decrementCount: PropTypes.func,
+  addIremoveCounttemToCart: PropTypes.func,
+};
 
 export default CardWrapper;
 

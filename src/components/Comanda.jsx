@@ -3,6 +3,7 @@ import "./Comanda.scss";
 import { PrimaryButtonOrder } from "./Button";
 // import { firebase } from "../../src/configFirebase";
 import { createCollection } from "../API/firestore";
+import PropTypes from "prop-types";
 
 function Comanda({ data, resetOrders }) {
   // console.log(data);
@@ -89,5 +90,10 @@ function Comanda({ data, resetOrders }) {
     </div>
   );
 }
+
+Comanda.propTypes = {
+  data: PropTypes.array,
+  resetOrders: PropTypes.func,
+};
 
 export default Comanda;

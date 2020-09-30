@@ -3,6 +3,7 @@ import { PrimaryButton, TertiaryButton } from "./Button";
 import "./CardProduct.scss";
 import lessIcon from "../images/less-icon.svg";
 import plusIcon from "../images/plus-icon.svg";
+import PropTypes from "prop-types";
 
 function CardProduct({
   id,
@@ -52,5 +53,15 @@ function CardProduct({
     </li>
   );
 }
+
+CardProduct.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  addItemToCart: PropTypes.func.isRequired,
+  addCount: PropTypes.func.isRequired,
+  decrementCount: PropTypes.func.isRequired,
+  removeCount: PropTypes.func.isRequired,
+};
 
 export default CardProduct;
