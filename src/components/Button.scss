@@ -1,44 +1,49 @@
 $textColorBtn: #fff;
 $borderRadiusBtn: 8px;
 
-button {
-  background-color: #ff6745;
-  border: none;
-  width: 16rem;
-  height: 3.5rem;
-  margin: 2.5rem 1rem;
+.button {
+  max-width: 16rem;
+  min-width: 20px;
+  min-height: 25px;
   border-radius: $borderRadiusBtn;
-  outline: none;
-  cursor: pointer;
   color: $textColorBtn;
-  font-size: 24px;
-  font-weight: bold;
+  // max-height: 3.5rem;
+  // margin: 2.5rem 1rem;
+  // font-size: 24px;
+  // font-weight: bold;
+}
+.primaryIcon-btn {
+  background-color: #ff6745;
+  width: 11rem;
+  font-size: 20px;
 }
 .icon-button {
   margin-right: 1.5rem;
 }
-
-.add {
+.primary-btn {
   background-color: #ff6745;
-  margin: 0;
   width: 72px;
-  height: 25px;
-  font-size: 14px;
+  margin: 0;
   margin-left: 0;
   font-weight: lighter;
 }
 
-.sendOrder {
-  width: 11rem;
-  font-size: 20px;
+.primaryOrder-btn {
+  background-color: #ff6745;
+  width: 9rem;
+  font-size: 16px;
+  height: 4rem;
 }
-
-.less-button,
-.more-button {
-  width: 20px;
-  height: 20px;
+.secondary-btn {
+  &:disabled {
+    font-size: 16px;
+    // color: #000;
+    background-color: #c4c4c4;
+    height: 4rem;
+  }
+}
+.tertiary-btn {
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  border-radius: 1px;
+  background-color: transparent;
 }
